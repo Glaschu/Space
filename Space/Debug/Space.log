@@ -1,50 +1,9 @@
-﻿Build started 13/04/2015 17:12:43.
-     1>Project "R:\Space\Space\Space.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt asteroidsGame.cpp cPlayer2.cpp cRocket.cpp main.cpp
-         main.cpp
-         cRocket.cpp
-     1>r:\space\space\crocket.cpp(27): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>r:\space\space\crocket.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>r:\space\space\crocket.cpp(31): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>r:\space\space\crocket.cpp(33): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-         Generating Code...
-         Compiling...
-         cPlayer2.cpp
-     1>r:\space\space\cplayer2.cpp(23): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>r:\space\space\cplayer2.cpp(25): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>r:\space\space\cplayer2.cpp(27): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>r:\space\space\cplayer2.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-         asteroidsGame.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"R:\Space\Debug\Space.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"R:\Space\Debug\Space.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"R:\Space\Debug\Space.lib" /MACHINE:X86 Debug\asteroidsGame.obj
-         Debug\cAsteroid.obj
-         Debug\cBkGround.obj
-         Debug\cBullet.obj
-         Debug\cBullet2.obj
-         Debug\cFont.obj
-         Debug\cFontMgr.obj
-         Debug\cInputMgr.obj
-         Debug\cPlayer2.obj
-         Debug\cRocket.obj
-         Debug\cSound.obj
-         Debug\cSoundMgr.obj
-         Debug\cSprite.obj
-         Debug\cTexture.obj
-         Debug\cWNDManager.obj
-         Debug\main.obj
-         Debug\windowOGL.obj
-         Libraries\alut.lib
-         Libraries\DevIL.lib
-         Libraries\freeglut.lib
-         Libraries\ftgl.lib
-         Libraries\ILU.lib
-         Libraries\ILUT.lib
-         Libraries\OpenAL32.lib
-         Space.vcxproj -> R:\Space\Debug\Space.exe
-     1>Done Building Project "R:\Space\Space\Space.vcxproj" (Build target(s)).
+﻿Build started 15/04/2015 16:21:11.
+     1>Project "R:\backUp\gp\Space\Space\Space.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         Space.vcxproj -> R:\backUp\gp\Space\Debug\Space.exe
+     1>Done Building Project "R:\backUp\gp\Space\Space\Space.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.92
+Time Elapsed 00:00:00.37

@@ -21,7 +21,7 @@ private:
 	bool rightMouseBtn;           // true if right mouse button down
 
 	static cInputMgr* pInstance;
-
+	  // mouse screen coordinates
 public:
 	static cInputMgr* getInstance();
 
@@ -30,7 +30,7 @@ public:
 	const BYTE KEYS_PRESSED_BUFFER = 2;
 	const BYTE MOUSE_BUFFER = 4;
 	const BYTE KEYS_MOUSE_TEXT = KEYS_DOWN_BUFFER + KEYS_PRESSED_BUFFER + MOUSE_BUFFER;
-
+	
 	cInputMgr();								// Constructor
 	void keyDown(WPARAM);						// Save key down state
 	void keyUp(WPARAM);							// Save key up state

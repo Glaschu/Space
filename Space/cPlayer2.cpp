@@ -41,13 +41,15 @@ Update the sprite position
 
 void cPlayer2::update(float deltaTime)
 {
+	
+	//keyboard enter to move
 	if (m_InputMgr->isKeyDown('D'))
 	{
-		spritePos2D.x += 5.0f;
+		spritePos2D.x += 10.0f;
 	}
 	if (m_InputMgr->isKeyDown('A'))
 	{
-		spritePos2D.x -= 5.0f;
+		spritePos2D.x -= 10.0f;
 
 	}
 	if (m_InputMgr->isKeyDown('S'))
@@ -66,17 +68,20 @@ void cPlayer2::update(float deltaTime)
 			theSpaceBullets[numBullets]->setSpriteRotation(getSpriteRotation());
 			theSpaceBullets[numBullets]->setActive(true);
 			theSpaceBullets[numBullets]->setMdlRadius();
-			
+			//play the firing sound
+			m_SoundMgr->getSnd("Shot")->playAudio(AL_TRUE);
 		}
-// play the firing sound
-		//	m_SoundMgr->getSnd("Shot")->playAudio(AL_TRUE);
+ 
 
 	}
+	//makes sure the player cant go off screen
 	if (spritePos2D.x + (textureWidth / 2) > 1754){
 		spritePos2D.x -= 5.0f;
+		
 	}
 	if (spritePos2D.x - (textureWidth / 2) < 0){
 		spritePos2D.x += 5.0f;
+
 	}
 
 
@@ -106,12 +111,11 @@ void cPlayer2::update(float deltaTime)
 	*/
 	for (vector<cBullet2*>::iterator bulletIterartor = theSpaceBullets.begin(); bulletIterartor != theSpaceBullets.end(); ++bulletIterartor)
 	{
-
 		
-
+		
 		(*bulletIterartor)->update(deltaTime);
 	
-		for (vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin(); asteroidIterator != theAsteroids.end(); ++asteroidIterator)
+		for (vector<cAiPlayer*>::iterator asteroidIterator = theAsteroids.begin(); asteroidIterator != theAsteroids.end(); ++asteroidIterator)
 		{
 			if ((*asteroidIterator)->collidedWith((*asteroidIterator)->getBoundingRect(), (*bulletIterartor)->getBoundingRect()))
 			{
@@ -124,16 +128,27 @@ void cPlayer2::update(float deltaTime)
 
 
 	}
+	//for when the player is hit by bullet -1 lives
+	for (vector<cBullet*>::iterator p2Bullets = theRocketBullets.begin(); p2Bullets != theRocketBullets.end(); ++p2Bullets){
+		(*p2Bullets)->update(deltaTime);
+		if ((*p2Bullets)->getSpritePos().x > spritePos2D.x - (textureWidth / 2) && (*p2Bullets)->getSpritePos().x<spritePos2D.x + (textureWidth / 2) && (*p2Bullets)->getSpritePos().y>spritePos2D.y - (textureHeight / 2) && (*p2Bullets)->getSpritePos().y < spritePos2D.y + (textureHeight / 2)){
+			life -= 1;
+			(*p2Bullets)->setActive(false);
+		}
+	}
 
 	vector<cBullet2*>::iterator bulletIterartor = theSpaceBullets.begin();
 	while (bulletIterartor != theSpaceBullets.end())
 	{
+		//play sound and erase bullet
 		if ((*bulletIterartor)->isActive() == false)
 		{
+			
 			bulletIterartor = theSpaceBullets.erase(bulletIterartor);
-			// play the explosion sound.
-			//m_SoundMgr->getSnd("Explosion")->playAudio(AL_TRUE);
+			 //play the explosion sound.
+			m_SoundMgr->getSnd("Explosion")->playAudio(AL_TRUE);
 		}
+		//detroy bullet after leaves the screen
 		else if ((*bulletIterartor)->getSpritePos().y > 1000){
 			bulletIterartor = theSpaceBullets.erase(bulletIterartor);
 		}
@@ -165,4 +180,31 @@ glm::vec2 cPlayer2::getRocketVelocity()
 }
 int cPlayer2::getScore(){
 	return Score2;
+}
+//resets the lives ,bullets and score
+void cPlayer2::setLives(bool lives){
+	if (lives){
+		life = 3;
+		Score2 = 0;
+		vector<cBullet2*>::iterator bulletIterartor = theSpaceBullets.begin();
+		while (bulletIterartor != theSpaceBullets.end()){
+			bulletIterartor = theSpaceBullets.erase(bulletIterartor);
+		}
+	}
+}
+//send the players score and life
+string cPlayer2::getInfo()
+{
+	stringstream output;
+	output << "Score: " << Score2 << "    Life: " << life;
+	return output.str();
+}
+//send if the player is dead
+bool cPlayer2::getDeath(){
+	if (life <= 0){
+		return true;
+	}
+	else{
+		return false;
+	}
 }

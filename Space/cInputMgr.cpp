@@ -244,4 +244,3 @@ bool cInputMgr::getRightMouseBtn()
 {
 	return rightMouseBtn;
 }
-

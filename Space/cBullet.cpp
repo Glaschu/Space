@@ -49,11 +49,7 @@ void cBullet::update(float deltaTime)
 	spriteVelocityAdd *= spriteTranslation;
 
 	bulletVelocity += spriteVelocityAdd;
-	
-	
-	//glm::vec2 centrePos = getSpriteCentre();
-	//spritePos2D.x -= centrePos.x;
-	//spritePos2D.y += centrePos.y;
+
 	
 	spritePos2D += bulletVelocity * deltaTime;
 

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-04-15T14:53:44" Importance="High" Text="Reverse Engineering Started." />
+  <Error Timestamp="2015-04-15T14:53:44" Importance="High" Text="Reverse engineer C++ type is not supported. Some DGML node(s) will be skipped during the process. Please see warnings for details." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cBullet' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cBullet2' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cFont' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cFontMgr' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cInputMgr' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cPlayer' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cPlayer2' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cSound' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cSoundMgr' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cSprite' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cTexture' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cWNDManager' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'windowOGL' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'Button' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cAiPlayer' is skipped." />
+  <Warning Timestamp="2015-04-15T14:53:44" Importance="Medium" Text="Reverse engineer C++ type 'cBkGround' is skipped." />
+  <Message Timestamp="2015-04-15T14:53:44" Importance="High" Text="(0) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-04-15T14:53:44" Importance="High" Text="The reverse engineering operation completed with (1) error(s), and (16) warning(s)." />
+</Log>

@@ -37,7 +37,7 @@
 using namespace std;
 
 //Define the string to appear in the top left corner of the window
-#define WINDOW_TITLE "Space Invaders"
+#define WINDOW_TITLE "Space Invaders 2015"
 
 // This header file contains all the constants & enumarated types for the game
 

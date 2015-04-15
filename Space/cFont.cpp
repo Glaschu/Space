@@ -75,12 +75,26 @@ void cFont::printText(LPCSTR text, FTPoint textPos)
 
 	glPopMatrix();
 }
-void cFont::printScore(LPCSTR text, FTPoint textPos)
+//display players data
+void cFont::printScoreP1(LPCSTR text, FTPoint textPos)
 {
 	glPushMatrix();
 
 	glColor3f(0.0f, 255.0f, 0.0f);
-	glTranslatef(700, 17, 0);
+	glTranslatef(1300, 17, 0);
+	glRotatef(180, 0, 0, -1);
+	glRotatef(180, 0, -1, 0);
+
+	theFont->Render(text, -1, textPos);
+
+	glPopMatrix();
+}//display players data
+void cFont::printScoreP2(LPCSTR text, FTPoint textPos)
+{
+	glPushMatrix();
+
+	glColor3f(0.0f, 255.0f, 0.0f);
+	glTranslatef(1300, 800, 0);
 	glRotatef(180, 0, 0, -1);
 	glRotatef(180, 0, -1, 0);
 
@@ -88,3 +102,17 @@ void cFont::printScore(LPCSTR text, FTPoint textPos)
 
 	glPopMatrix();
 }
+void cFont::endTest(LPCSTR text, FTPoint textPos)
+{
+	glPushMatrix();
+
+	glColor3f(0.0f, 255.0f, 0.0f);
+	glTranslatef(900, 500, 0);
+	glRotatef(180, 0, 0, -1);
+	glRotatef(180, 0, -1, 0);
+
+	theFont->Render(text, -1, textPos);
+
+	glPopMatrix();
+}
+

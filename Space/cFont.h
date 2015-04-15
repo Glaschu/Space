@@ -24,7 +24,9 @@ public:
 	~cFont();
 	FTFont* getFont();
 	void printText(LPCSTR text, FTPoint textPos);
-	void printScore(LPCSTR text, FTPoint textPos);
+	void printScoreP1(LPCSTR text, FTPoint textPos);//display players data
+	void printScoreP2(LPCSTR text, FTPoint textPos);//display players2 data
+	void endTest(LPCSTR text, FTPoint textPos);//display players2 data
 
 };
 #endif
